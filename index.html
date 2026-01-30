@@ -20,6 +20,9 @@
         .invalid-input { border-color: #f87171 !important; background-color: #fef2f2; }
         .invalid-msg { color: #dc2626; font-size: 0.75rem; margin-top: 0.25rem; display: none; }
         
+        /* 隱藏條件欄位 */
+        .conditional-field { display: none; }
+
         /* 摘要摺疊樣式 */
         #summaryContent { max-height: 4.5rem; overflow: hidden; transition: max-height 0.5s ease; position: relative; }
         #summaryContent.expanded { max-height: 2000px; }
@@ -73,6 +76,7 @@
                 <h2 class="text-xs font-bold text-white flex items-center tracking-wider uppercase"><svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 mr-2 opacity-80 text-blue-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><line x1="10" y1="9" x2="8" y2="9"></line></svg> 講座摘要 Summary</h2>
             </div>
             <div class="p-6 md:p-8">
+                <!-- 講題區 -->
                 <div class="mb-6">
                     <label class="text-[9px] uppercase tracking-widest text-slate-400 font-bold mb-1 block">Lecture Title / 講題</label>
                     <h3 class="text-lg md:text-xl font-bold text-slate-800 leading-tight">Dietary patterns and cardiometabolic risk: epidemiological insights and translational opportunities</h3>
@@ -81,7 +85,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-y-5 gap-x-10">
                     <div class="space-y-1"><label class="text-[9px] font-bold text-blue-600 uppercase tracking-wider flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 mr-1.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>講者</label><p class="text-sm font-bold text-slate-700">Cheryl Anderson, PhD, MPH, MS, FAHA</p></div>
                     <div class="md:col-span-2 space-y-1"><label class="text-[9px] font-bold text-blue-600 uppercase tracking-wider flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 mr-1.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>講者單位</label><p class="text-sm text-slate-700 font-medium">Professor & Dean, Herbert Wertheim School of Public Health & Human Longevity Science, UCSD</p></div>
-                    <div class="space-y-1"><label class="text-[9px] font-bold text-blue-600 uppercase tracking-wider flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 mr-1.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>講座時間</label><p class="text-sm text-slate-700 font-medium">2026/03/13 (五) 15:00 - 17:00</p></div>
+                    <div class="space-y-1"><label class="text-[9px] font-bold text-blue-600 uppercase tracking-wider flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 mr-1.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>講座時間</label><p class="text-sm text-slate-700 font-medium font-medium">2026/03/13 (五) 15:00 - 17:00</p></div>
                     <div class="space-y-1"><label class="text-[9px] font-bold text-blue-600 uppercase tracking-wider flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 mr-1.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>講座地點</label><p class="text-sm text-slate-700 font-medium">台大醫學院 102 講堂</p></div>
                     <div class="space-y-1"><label class="text-[9px] font-bold text-rose-500 uppercase tracking-wider flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 mr-1.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>截止日期</label><p class="text-sm text-rose-600 font-bold underline decoration-rose-200 underline-offset-4 tracking-tighter">2026/03/08 (日) 17:00 止</p></div>
                 </div>
@@ -125,18 +129,58 @@
                     </div>
                     <div id="deptSection" class="conditional-field space-y-2"><label class="text-xs font-bold text-slate-700 ml-1">任職科部 Department <span class="text-rose-500">*</span></label>
                         <div class="relative"><select id="department" name="department" class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50/30 focus:border-blue-500 focus:bg-white outline-none text-sm form-input appearance-none">
-                            <option value="">請選擇</option><option value="小兒部">小兒部</option><option value="工務室">工務室</option><option value="內科部">內科部</option><option value="公共事務室">公共事務室</option><option value="分級醫療管理中心">分級醫療管理中心</option><option value="心血管中心">心血管中心</option><option value="牙科部">牙科部</option><option value="主計室">主計室</option><option value="外科部">外科部</option><option value="失智共同照護中心">失智共同照護中心</option><option value="皮膚部">皮膚部</option><option value="企劃管理部">企劃管理部</option><option value="安全衛生室">安全衛生室</option><option value="尖端醫療發展中心">尖端醫療發展中心</option><option value="老年醫學部">老年醫學部</option><option value="耳鼻喉部">耳鼻喉部</option><option value="肝炎研究中心">肝炎研究中心</option><option value="兒童醫院">兒童醫院</option><option value="受試者保護中心">受試者保護中心</option><option value="泌尿部">泌尿部</option><option value="物理治療中心">物理治療中心</option><option value="社會工作室">社會工作室</option><option value="金山分院">金山分院</option><option value="門診部">門診部</option><option value="品質管理中心">品質管理中心</option><option value="急診醫學部">急診醫學部</option><option value="倫理中心">倫理中心</option><option value="家庭醫學部">家庭醫學部</option><option value="核子醫學部">核子醫學部</option><option value="病理部">病理部</option><option value="病歷資訊管理室">病歷資訊管理室</option><option value="神經部">神經部</option><option value="秘書室">秘書室</option><option value="骨科部">骨科部</option><option value="健康教育中心">健康教育中心</option><option value="健康管理中心">健康管理中心</option><option value="國際醫療中心">國際醫療中心</option><option value="基因醫學部">基因醫學部</option><option value="婦產部">婦產部</option><option value="教學部">教學部</option><option value="眼科部">眼科部</option><option value="麻醉部">麻醉部</option><option value="創傷醫學部">創傷醫學部</option><option value="復健部">復健部</option><option value="智慧醫療中心">智慧醫療中心</option><option value="感染管制中心">感染管制中心</option><option value="腫瘤醫學部">腫瘤醫學部</option><option value="資訊室">資訊室</option><option value="圖書室">圖書室</option><option value="精神醫學部">精神醫學部</option><option value="綜合診療部">綜合診療部</option><option value="臺大醫療體系管理發展中心">臺大醫療體系管理發展中心</option><option value="輔助暨整合醫學中心">輔助暨整合醫學中心</option><option value="影像醫學部">影像醫學部</option><option value="檢驗醫學部">檢驗醫學部</option><option value="營養室">營養室</option><option value="環境及職業醫學部">環境及職業醫學部</option><option value="癌症防治中心">癌症防治中心</option><option value="總務室">總務室</option><option value="臨床心理中心">臨床心理中心</option><option value="醫學工程部">醫學工程部</option><option value="醫學研究部">醫學研究部</option><option value="醫療事務室">醫療事務室</option><option value="藥劑部">藥劑部</option><option value="護理部">護理部</option><option value="其他">其他</option>
+                            <option value="">請選擇</option><option value="小兒部">小兒部</option><option value="工務室">工務室</option><option value="內科部">內科部</option><option value="公共事務室">公共事務室</option><option value="分級醫療管理中心">分級醫療管理中心</option><option value="心血管中心">心血管中心</option><option value="牙科部">牙科部</option><option value="主計室">主計室</option><option value="外科部">外科部</option><option value="失智共同照護中心">失智共同照護中心</option><option value="皮膚部">皮膚部</option><option value="企劃管理部">企劃管理部</option><option value="安全衛生室">安全衛生室</option><option value="尖端醫療發展中心">尖端醫療發展中心</option><option value="老年醫學部">老年醫學部</option><option value="耳鼻喉部">耳鼻喉部</option><option value="肝炎研究中心">肝炎研究中心</option><option value="兒童醫院">兒童醫院</option><option value="受試者保護中心">受試者保護中心</option><option value="泌尿部">泌尿部</option><option value="物理治療中心">物理治療中心</option><option value="社會工作室">社會工作室</option><option value="金山分院">金山分院</option><option value="門診部">門診部</option><option value="品質管理中心">品質管理中心</option><option value="急診醫學部">急診醫學部</option><option value="倫理中心">倫理中心</option><option value="家庭醫學部">家庭醫學部</option><option value="核子醫學部">核子醫學部</option><option value="病理部">病理部</option><option value="病歷資訊管理室">病歷資訊管理室</option><option value="神經部">神經部</option><option value="秘書室">秘書室</option><option value="骨科部">骨科部</option><option value="健康教育中心">健康教育中心</option><option value="健康管理中心">健康管理中心</option><option value="國際醫療中心">國際醫療中心</option><option value="基因醫學部">基因醫學部</option><option value="婦產部">婦產部</option><option value="教學部">教學部</option><option value="眼科部">眼科部</option><option value="麻醉部">麻醉部</option><option x1="創傷醫學部">創傷醫學部</option><option value="復健部">復健部</option><option value="智慧醫療中心">智慧醫療中心</option><option value="感染管制中心">感染管制中心</option><option value="腫瘤醫學部">腫瘤醫學部</option><option value="資訊室">資訊室</option><option value="圖書室">圖書室</option><option value="精神醫學部">精神醫學部</option><option value="綜合診療部">綜合診療部</option><option value="臺大醫療體系管理發展中心">臺大醫療體系管理發展中心</option><option value="輔助暨整合醫學中心">輔助暨整合醫學中心</option><option value="影像醫學部">影像醫學部</option><option value="檢驗醫學部">檢驗醫學部</option><option value="營養室">營養室</option><option value="環境及職業醫學部">環境及職業醫學部</option><option value="癌症防治中心">癌症防治中心</option><option value="總務室">總務室</option><option value="臨床心理中心">臨床心理中心</option><option value="醫學工程部">醫學工程部</option><option value="醫學研究部">醫學研究部</option><option value="醫療事務室">醫療事務室</option><option value="藥劑部">藥劑部</option><option value="護理部">護理部</option><option value="其他">其他</option>
                         </select><svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"></path></svg></div>
                     </div>
                     <div id="unitSection" class="conditional-field space-y-2"><label class="text-xs font-bold text-slate-700 ml-1">任職單位 Unit <span class="text-rose-500">*</span></label><input type="text" id="unitInput" name="unit" placeholder="請註明" class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50/30 focus:border-blue-500 focus:bg-white outline-none text-sm form-input"></div>
+                    
+                    <!-- 身分與來源 -->
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-7">
-                        <div class="space-y-2"><label class="text-xs font-bold text-slate-700 ml-1">身分 Position <span class="text-rose-500">*</span></label><div class="relative"><select id="position" name="position" required class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50/30 focus:border-blue-500 focus:bg-white outline-none text-sm form-input appearance-none">
-                            <option value="">請選擇</option><option value="主治醫師">主治醫師</option><option value="住院醫師">住院醫師</option><option value="護理人員">護理人員</option><option value="醫事人員">醫事人員</option><option value="行政人員">行政人員</option><option value="研究員">研究員</option><option value="研究助理">研究助理</option><option value="醫學院教師">醫學院教師</option><option value="校總區教師">校總區教師</option><option value="醫學院學生">醫學院學生</option><option value="校總區學生">校總區學生</option><option value="其他身分">其他身分</option>
-                        </select><svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"></path></svg></div><div id="otherPositionSection" class="conditional-field mt-2"><input type="text" id="otherPositionInput" name="otherPosition" placeholder="請註明" class="w-full px-3 py-2 rounded-lg border border-slate-200 text-sm outline-none"></div></div>
-                        <div class="space-y-2"><label class="text-xs font-bold text-slate-700 ml-1">資訊來源 Source <span class="text-rose-500">*</span></label><div class="relative"><select id="infoSource" name="infoSource" required class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50/30 focus:border-blue-500 focus:bg-white outline-none text-sm form-input appearance-none">
-                            <option value="">請選擇</option><option value="醫院全院公告信">醫院全院公告信</option><option value="醫學院全院公告信/最新消息">醫學院全院公告信/最新消息</option><option value="醫學校區演講公告">醫學校區演講公告</option><option value="醫研部網站/FB粉專">醫研部網站/FB粉專</option><option value="口耳相傳">口耳相傳</option><option value="其他">其他</option>
-                        </select><svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"></path></svg></div><div id="otherSourceSection" class="conditional-field mt-2"><input type="text" id="otherSourceInput" name="otherSource" placeholder="請註明管道" class="w-full px-3 py-2 rounded-lg border border-slate-200 text-sm outline-none"></div></div>
+                        <div class="space-y-2">
+                            <label class="text-xs font-bold text-slate-700 ml-1">身分 Position <span class="text-rose-500">*</span></label>
+                            <div class="relative">
+                                <select id="position" name="position" required class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50/30 focus:border-blue-500 focus:bg-white outline-none text-sm form-input appearance-none">
+                                    <option value="">請選擇</option>
+                                    <option value="主治醫師">主治醫師</option>
+                                    <option value="住院醫師">住院醫師</option>
+                                    <option value="護理人員">護理人員</option>
+                                    <option value="醫事人員">醫事人員</option>
+                                    <option value="行政人員">行政人員</option>
+                                    <option value="研究員">研究員</option>
+                                    <option value="研究助理">研究助理</option>
+                                    <option value="醫學院教師">醫學院教師</option>
+                                    <option value="校總區教師">校總區教師</option>
+                                    <option value="醫學院學生">醫學院學生</option>
+                                    <option value="校總區學生">校總區學生</option>
+                                    <option value="其他身分">其他身分</option>
+                                </select>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"></path></svg>
+                            </div>
+                            <div id="otherPositionSection" class="conditional-field mt-2">
+                                <input type="text" id="otherPositionInput" name="otherPosition" placeholder="請註明身分" class="w-full px-3 py-2 rounded-lg border border-slate-200 text-sm outline-none focus:border-blue-400">
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label class="text-xs font-bold text-slate-700 ml-1">講座獲得管道 Source <span class="text-rose-500">*</span></label>
+                            <div class="relative">
+                                <select id="infoSource" name="infoSource" required class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50/30 focus:border-blue-500 focus:bg-white outline-none text-sm form-input appearance-none">
+                                    <option value="">請選擇</option>
+                                    <option value="醫院全院公告信">醫院全院公告信</option>
+                                    <option value="醫學院全院公告信/最新消息">醫學院全院公告信/最新消息</option>
+                                    <option value="醫學校區演講公告">醫學校區演講公告</option>
+                                    <option value="醫研部網站/FB粉專">醫研部網站/FB粉專</option>
+                                    <option value="口耳相傳">口耳相傳</option>
+                                    <option value="其他">其他</option>
+                                </select>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"></path></svg>
+                            </div>
+                            <div id="otherSourceSection" class="conditional-field mt-2">
+                                <input type="text" id="otherSourceInput" name="otherSource" placeholder="請註明管道" class="w-full px-3 py-2 rounded-lg border border-slate-200 text-sm outline-none focus:border-blue-400">
+                            </div>
+                        </div>
                     </div>
+
                     <div class="space-y-2"><label class="text-xs font-bold text-slate-700 ml-1">問題與建議 Questions</label><textarea name="comments" rows="3" placeholder="如有任何問題或建議，我們將於講座中討論。" class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50/30 focus:border-blue-500 focus:bg-white outline-none transition-all resize-none text-sm form-input"></textarea></div>
                     <div class="pt-4"><button type="submit" id="submitBtn" class="w-full bg-blue-600 text-white font-bold py-4 px-8 rounded-2xl hover:bg-blue-700 active:scale-[0.98] transition-all shadow-xl shadow-blue-200 transform text-sm tracking-widest flex items-center justify-center uppercase">提交報名表 SUBMIT</button></div>
                 </form>
@@ -153,7 +197,9 @@
             deptSec: document.getElementById('deptSection'), deptSel: document.getElementById('department'),
             unitSec: document.getElementById('unitSection'), unitInp: document.getElementById('unitInput'),
             pos: document.getElementById('position'), otherPosSec: document.getElementById('otherPositionSection'),
+            otherPosInp: document.getElementById('otherPositionInput'),
             source: document.getElementById('infoSource'), otherSrcSec: document.getElementById('otherSourceSection'),
+            otherSrcInp: document.getElementById('otherSourceInput'),
             submitBtn: document.getElementById('submitBtn'), msgBox: document.getElementById('messageBox'),
             emailInp: document.getElementById('field_email'), emailErr: document.getElementById('emailError'),
             globeBtn: document.getElementById('globeToggleBtn'), menuContainer: document.getElementById('floatingMenuContainer'),
@@ -161,16 +207,19 @@
             summaryContent: document.getElementById('summaryContent'), summaryToggleBtn: document.getElementById('summaryToggleBtn'),
             toggleBtnText: document.getElementById('toggleBtnText'), toggleBtnIcon: document.getElementById('toggleBtnIcon')
         };
+
         elements.summaryToggleBtn.addEventListener('click', () => {
             const isExp = elements.summaryContent.classList.toggle('expanded');
             elements.toggleBtnText.innerText = isExp ? "收合摘要 COLLAPSE" : "閱讀全文 READ MORE";
             elements.toggleBtnIcon.style.transform = isExp ? "rotate(180deg)" : "rotate(0deg)";
         });
+
         elements.globeBtn.addEventListener('click', () => {
             const isActive = elements.menuContainer.classList.toggle('active');
             elements.globeIcon.classList.toggle('hidden', isActive);
             elements.closeIcon.classList.toggle('hidden', !isActive);
         });
+
         document.addEventListener('click', (e) => {
             if (!elements.globeBtn.contains(e.target) && !elements.menuContainer.contains(e.target)) {
                 elements.menuContainer.classList.remove('active');
@@ -178,6 +227,7 @@
                 elements.closeIcon.classList.add('hidden');
             }
         });
+
         elements.org.addEventListener('change', function() {
             const isNTUH = this.value.includes('台大醫院');
             elements.deptSec.style.display = isNTUH ? 'block' : 'none';
@@ -185,8 +235,19 @@
             elements.unitSec.style.display = (!isNTUH && this.value !== '') ? 'block' : 'none';
             elements.unitInp.required = (!isNTUH && this.value !== '');
         });
-        elements.pos.addEventListener('change', function() { elements.otherPosSec.style.display = this.value === '其他身分' ? 'block' : 'none'; });
-        elements.source.addEventListener('change', function() { elements.otherSrcSec.style.display = this.value === '其他' ? 'block' : 'none'; });
+
+        elements.pos.addEventListener('change', function() { 
+            const isOther = this.value === '其他身分';
+            elements.otherPosSec.style.display = isOther ? 'block' : 'none'; 
+            elements.otherPosInp.required = isOther;
+        });
+
+        elements.source.addEventListener('change', function() { 
+            const isOther = this.value === '其他';
+            elements.otherSrcSec.style.display = isOther ? 'block' : 'none'; 
+            elements.otherSrcInp.required = isOther;
+        });
+
         elements.form.addEventListener('submit', async (e) => {
             e.preventDefault();
             if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(elements.emailInp.value)) {
@@ -201,6 +262,7 @@
                 alert("伺服器連線異常。"); elements.submitBtn.disabled = false; elements.submitBtn.innerHTML = '<span>提交報名表 SUBMIT</span>';
             }
         });
+
         function showSuccess() {
             elements.msgBox.innerHTML = `
                 <div class="text-center">

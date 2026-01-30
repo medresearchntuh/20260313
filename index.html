@@ -111,7 +111,9 @@
             <div class="p-8 md:p-12">
                 <div class="mb-10 text-center md:text-left">
                     <h2 class="text-lg font-bold text-slate-900 flex items-center justify-center md:justify-start">
-                        <span class="w-7 h-7 rounded-lg bg-blue-600 text-white flex items-center justify-center mr-3 text-xs shadow-lg shadow-blue-200 font-mono">1</span>
+                        <span class="w-7 h-7 rounded-lg bg-blue-600 text-white flex items-center justify-center mr-3 shadow-lg shadow-blue-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+                        </span>
                         報名資訊 Registration
                     </h2>
                     <p class="text-slate-400 text-[11px] mt-2 md:ml-10 tracking-tight">請填寫正確資料，承辦單位將於演講前三天寄出提醒信。</p>
@@ -129,30 +131,17 @@
                     </div>
                     <div id="deptSection" class="conditional-field space-y-2"><label class="text-xs font-bold text-slate-700 ml-1">任職科部 Department <span class="text-rose-500">*</span></label>
                         <div class="relative"><select id="department" name="department" class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50/30 focus:border-blue-500 focus:bg-white outline-none text-sm form-input appearance-none">
-                            <option value="">請選擇</option><option value="小兒部">小兒部</option><option value="工務室">工務室</option><option value="內科部">內科部</option><option value="公共事務室">公共事務室</option><option value="分級醫療管理中心">分級醫療管理中心</option><option value="心血管中心">心血管中心</option><option value="牙科部">牙科部</option><option value="主計室">主計室</option><option value="外科部">外科部</option><option value="失智共同照護中心">失智共同照護中心</option><option value="皮膚部">皮膚部</option><option value="企劃管理部">企劃管理部</option><option value="安全衛生室">安全衛生室</option><option value="尖端醫療發展中心">尖端醫療發展中心</option><option value="老年醫學部">老年醫學部</option><option value="耳鼻喉部">耳鼻喉部</option><option value="肝炎研究中心">肝炎研究中心</option><option value="兒童醫院">兒童醫院</option><option value="受試者保護中心">受試者保護中心</option><option value="泌尿部">泌尿部</option><option value="物理治療中心">物理治療中心</option><option value="社會工作室">社會工作室</option><option value="金山分院">金山分院</option><option value="門診部">門診部</option><option value="品質管理中心">品質管理中心</option><option value="急診醫學部">急診醫學部</option><option value="倫理中心">倫理中心</option><option value="家庭醫學部">家庭醫學部</option><option value="核子醫學部">核子醫學部</option><option value="病理部">病理部</option><option value="病歷資訊管理室">病歷資訊管理室</option><option value="神經部">神經部</option><option value="秘書室">秘書室</option><option value="骨科部">骨科部</option><option value="健康教育中心">健康教育中心</option><option value="健康管理中心">健康管理中心</option><option value="國際醫療中心">國際醫療中心</option><option value="基因醫學部">基因醫學部</option><option value="婦產部">婦產部</option><option value="教學部">教學部</option><option value="眼科部">眼科部</option><option value="麻醉部">麻醉部</option><option x1="創傷醫學部">創傷醫學部</option><option value="復健部">復健部</option><option value="智慧醫療中心">智慧醫療中心</option><option value="感染管制中心">感染管制中心</option><option value="腫瘤醫學部">腫瘤醫學部</option><option value="資訊室">資訊室</option><option value="圖書室">圖書室</option><option value="精神醫學部">精神醫學部</option><option value="綜合診療部">綜合診療部</option><option value="臺大醫療體系管理發展中心">臺大醫療體系管理發展中心</option><option value="輔助暨整合醫學中心">輔助暨整合醫學中心</option><option value="影像醫學部">影像醫學部</option><option value="檢驗醫學部">檢驗醫學部</option><option value="營養室">營養室</option><option value="環境及職業醫學部">環境及職業醫學部</option><option value="癌症防治中心">癌症防治中心</option><option value="總務室">總務室</option><option value="臨床心理中心">臨床心理中心</option><option value="醫學工程部">醫學工程部</option><option value="醫學研究部">醫學研究部</option><option value="醫療事務室">醫療事務室</option><option value="藥劑部">藥劑部</option><option value="護理部">護理部</option><option value="其他">其他</option>
+                            <option value="">請選擇</option><option value="小兒部">小兒部</option><option value="工務室">工務室</option><option value="內科部">內科部</option><option value="公共事務室">公共事務室</option><option value="分級醫療管理中心">分級醫療管理中心</option><option value="心血管中心">心血管中心</option><option value="牙科部">牙科部</option><option value="主計室">主計室</option><option value="外科部">外科部</option><option value="失智共同照護中心">失智共同照護中心</option><option value="皮膚部">皮膚部</option><option value="企劃管理部">企劃管理部</option><option value="安全衛生室">安全衛生室</option><option value="尖端醫療發展中心">尖端醫療發展中心</option><option value="老年醫學部">老年醫學部</option><option value="耳鼻喉部">耳鼻喉部</option><option value="肝炎研究中心">肝炎研究中心</option><option value="兒童醫院">兒童醫院</option><option value="受試者保護中心">受試者保護中心</option><option value="泌尿部">泌尿部</option><option value="物理治療中心">物理治療中心</option><option value="社會工作室">社會工作室</option><option value="金山分院">金山分院</option><option value="門診部">門診部</option><option value="品質管理中心">品質管理中心</option><option value="急診醫學部">急診醫學部</option><option value="倫理中心">倫理中心</option><option value="家庭醫學部">家庭醫學部</option><option value="核子醫學部">核子醫學部</option><option value="病理部">病理部</option><option value="病歷資訊管理室">病歷資訊管理室</option><option value="神經部">神經部</option><option value="秘書室">秘書室</option><option value="骨科部">骨科部</option><option value="健康教育中心">健康教育中心</option><option value="健康管理中心">健康管理中心</option><option value="國際醫療中心">國際醫療中心</option><option value="基因醫學部">基因醫學部</option><option value="婦產部">婦產部</option><option value="教學部">教學部</option><option value="眼科部">眼科部</option><option value="麻醉部">麻醉部</option><option value="創傷醫學部">創傷醫學部</option><option value="復健部">復健部</option><option value="智慧醫療中心">智慧醫療中心</option><option value="感染管制中心">感染管制中心</option><option value="腫瘤醫學部">腫瘤醫學部</option><option value="資訊室">資訊室</option><option value="圖書室">圖書室</option><option value="精神醫學部">精神醫學部</option><option value="綜合診療部">綜合診療部</option><option value="臺大醫療體系管理發展中心">臺大醫療體系管理發展中心</option><option value="輔助暨整合醫學中心">輔助暨整合醫學中心</option><option value="影像醫學部">影像醫學部</option><option value="檢驗醫學部">檢驗醫學部</option><option value="營養室">營養室</option><option value="環境及職業醫學部">環境及職業醫學部</option><option value="癌症防治中心">癌症防治中心</option><option value="總務室">總務室</option><option value="臨床心理中心">臨床心理中心</option><option value="醫學工程部">醫學工程部</option><option value="醫學研究部">醫學研究部</option><option value="醫療事務室">醫療事務室</option><option value="藥劑部">藥劑部</option><option value="護理部">護理部</option><option value="其他">其他</option>
                         </select><svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"></path></svg></div>
                     </div>
                     <div id="unitSection" class="conditional-field space-y-2"><label class="text-xs font-bold text-slate-700 ml-1">任職單位 Unit <span class="text-rose-500">*</span></label><input type="text" id="unitInput" name="unit" placeholder="請註明" class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50/30 focus:border-blue-500 focus:bg-white outline-none text-sm form-input"></div>
                     
-                    <!-- 身分與來源 -->
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-7">
                         <div class="space-y-2">
                             <label class="text-xs font-bold text-slate-700 ml-1">身分 Position <span class="text-rose-500">*</span></label>
                             <div class="relative">
                                 <select id="position" name="position" required class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50/30 focus:border-blue-500 focus:bg-white outline-none text-sm form-input appearance-none">
-                                    <option value="">請選擇</option>
-                                    <option value="主治醫師">主治醫師</option>
-                                    <option value="住院醫師">住院醫師</option>
-                                    <option value="護理人員">護理人員</option>
-                                    <option value="醫事人員">醫事人員</option>
-                                    <option value="行政人員">行政人員</option>
-                                    <option value="研究員">研究員</option>
-                                    <option value="研究助理">研究助理</option>
-                                    <option value="醫學院教師">醫學院教師</option>
-                                    <option value="校總區教師">校總區教師</option>
-                                    <option value="醫學院學生">醫學院學生</option>
-                                    <option value="校總區學生">校總區學生</option>
-                                    <option value="其他身分">其他身分</option>
+                                    <option value="">請選擇</option><option value="主治醫師">主治醫師</option><option value="住院醫師">住院醫師</option><option value="護理人員">護理人員</option><option value="醫事人員">醫事人員</option><option value="行政人員">行政人員</option><option value="研究員">研究員</option><option value="研究助理">研究助理</option><option value="醫學院教師">醫學院教師</option><option value="校總區教師">校總區教師</option><option value="醫學院學生">醫學院學生</option><option value="校總區學生">校總區學生</option><option value="其他身分">其他身分</option>
                                 </select>
                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"></path></svg>
                             </div>
@@ -165,13 +154,7 @@
                             <label class="text-xs font-bold text-slate-700 ml-1">講座獲得管道 Source <span class="text-rose-500">*</span></label>
                             <div class="relative">
                                 <select id="infoSource" name="infoSource" required class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50/30 focus:border-blue-500 focus:bg-white outline-none text-sm form-input appearance-none">
-                                    <option value="">請選擇</option>
-                                    <option value="醫院全院公告信">醫院全院公告信</option>
-                                    <option value="醫學院全院公告信/最新消息">醫學院全院公告信/最新消息</option>
-                                    <option value="醫學校區演講公告">醫學校區演講公告</option>
-                                    <option value="醫研部網站/FB粉專">醫研部網站/FB粉專</option>
-                                    <option value="口耳相傳">口耳相傳</option>
-                                    <option value="其他">其他</option>
+                                    <option value="">請選擇</option><option value="醫院全院公告信">醫院全院公告信</option><option value="醫學院全院公告信/最新消息">醫學院全院公告信/最新消息</option><option value="醫學校區演講公告">醫學校區演講公告</option><option value="醫研部網站/FB粉專">醫研部網站/FB粉專</option><option value="口耳相傳">口耳相傳</option><option value="其他">其他</option>
                                 </select>
                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"></path></svg>
                             </div>
